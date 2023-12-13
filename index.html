@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.7.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="website icon" href="https://static.wikia.nocookie.net/spiderman/images/a/ad/Peter_Parker_%28Earth-616%29_017.png/revision/latest?cb=20210807043502">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'gill sans';
+            color: white;
+        }
+
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+        }
+
+        #nav {
+            display: flex;
+            /* border: 2px solid red; */
+        }
+
+        #nav img {
+            /* cursor: pointer; */
+            margin-left: 150px;
+            height: 100px;
+            width: 200px;
+
+        }
+
+        #page1 {
+            height: 100vh;
+            width: 100vw;
+            background-color: black;
+        }
+
+        #nav-part2 {
+            margin-left: 300px;
+            display: flex;
+            align-items: center;
+        }
+
+        #nav-part2 h3 {
+            cursor: pointer;
+            margin: 40px;
+            font-size: 20px;
+            font-weight: 100;
+            margin-bottom: 50px;
+            text-transform: uppercase;
+        }
+
+        #page2 {
+            height: 100vh;
+            width: 100vw;
+            background-color: rgb(146, 32, 32);
+        }
+
+        .container {
+            height: 100%;
+            width: 100%;
+            display: flex;
+        }
+
+        .container #left {
+            height: 100%;
+            width: 40%;
+            /* background-color: red; */
+        }
+
+        .container #right {
+
+            height: 100%;
+            width: 60%;
+            /* background-color: blue; */
+        }
+
+        #left img {
+            margin: 20px 0px 30px 50px;
+            border-radius: 30px;
+            height: 500px;
+            width: 400px;
+            filter: grayscale();
+            /* background-color: black; */
+        }
+
+        .container #right {
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            flex-direction: column;
+        }
+
+        #right h1,
+        p {
+            margin-bottom: 30px;
+            /* font-weight: 900; */
+            font-size: 40px;
+            /* align-items: center; */
+        }
+
+        #right #name {
+            user-select:none;
+            font-weight: 900;
+            color: #F03739;
+        }
+
+        #right h1 {
+            font-size: 100px;
+        }
+
+        .button {
+            height: 60px;
+            width: 150px;
+            /* border: 2px solid black; */
+            background-color: #9E101A;
+            margin: 50px 0px 0px 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            cursor: pointer;
+            border-radius: 2px;
+            font-weight: 100;
+            /* margin-left: 20px; */
+        }
+
+        #right {
+            padding: 30px;
+        }
+
+        #page2 {
+    height: 100vh;
+    width: 100vw;
+    background-color:black;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.container1 {
+    border: 2px solid black;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 5%;
+}
+
+.box {
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 270px;
+    width: 300px;
+    border: 2px solid white;
+    margin: 10px; /* Add margin for spacing between the boxes */
+}
+.box h3{
+    margin-top: 5px;
+    font-weight: 300;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+#lorem{
+    margin: 20px;
+    font-size: 20px;
+}
+ #headline{
+    display: flex;
+    justify-content: center;
+    background-color:black;
+    height: 10px;
+    width: 100vw;
+  
+    /* align-items: center; */
+}
+#headline h2{
+    text-transform: uppercase;
+    font-weight: 300;
+    margin-top: 20px;
+    font-size: 50px;
+}
+.container1 .box  img{
+    height: 90px;
+    width: 90px;
+    border-radius: 10px;
+}
+#page3{
+    height: 60vh;
+    width: 100vw;
+    background-color:black;
+    display: flex;
+    /* align-items:center; */
+    justify-content: center;
+}
+#page3 .container2{
+    height: 250px;
+    width: 900px;
+    background-color: #111111;
+    margin-top: 5%;
+    /* display: flex; */
+
+
+}
+.container2{
+    padding: 20px;
+}
+#page3 .container2 h2{
+    width: 50%;
+    /* border: 2px solid red; */
+    font-size: 40px;
+}
+#page3 .container2 p{
+    /* margin-top: 10px; */
+    width: 70%;
+    /* border: 2px solid red; */
+    font-size: 20px;
+}
+#btncontainer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 10%; /* Add this to make sure the container takes up the full height */
+}
+
+.btn {
+    cursor: pointer;
+    height: 40px;
+    width: 120px;
+    background-color: #9E101A;
+    margin-right: 80px;
+    text-align: center;
+    font-size: 20px;
+    text-transform: uppercase;
+    display: flex; /* Add this to enable centering */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+}
+#footercont{
+    display: flex;
+    flex-direction: column;
+
+}
+
+#footercont #footer{
+    border-top: 2px solid #111111;
+    height: 100px;
+    width: 100vw;
+    background-color: black;
+    position: relative;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+}
+#footer img{
+           
+            height: 90px;
+            width: 200px;
+}
+.bet i{
+    cursor: pointer;
+    position: relative;
+    right: 50px;
+    margin: 20px;
+    font-size: 30px;
+}
+.madeby{
+    position: relative;
+    right: 10%;
+    font-size: 20px;
+}
+    </style>
+</head>
+
+<body>
+    <div id="page1">
+        <div id="nav">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQMAAADCCAMAAAB6zFdcAAAAq1BMVEUAAAD///8YNi0cHBzk5ORe1LFjY2P4+PjLy8vX19cbPTNOTk4uaVhf2rWRkZFVv6AHDw3Dw8NbW1tj4Lvz8/O8vLxBQUFWVlaIiIhg2LSqqqpqamq2traampolVEZ7e3s1NTUiIiIXFxdFnIIOIBpYyKdycnI9PT1HR0fV1dUpKSmDg4M+jXXr6+utra1IpYkRKCE3fGcgSDwqYE9Qs5YWMSo+i3QoW00IExBkbH06AAAEYklEQVR4nO3Ze3eaPAAGcDLBgIpKAyoowxusaJVq7drv/8mGR4Fc6tl29J28x+f3V0igkodLEqppAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPYft87zO4P6t57zO4P2RwdQav2WJ5ozO5nysz2DHWudGZ3M+VGezt+NuNzuR+rn0fLP//jwLeiRoyOHrIDOZrjxBKaHDqvJRBY+2QHA3G8nHt0M0PI57Y8GoYn9KOncxgzI4Xb1/9erI9/rje/XFNF66V6LQ7bj8/JRNirjQ5g0inYfI0bCYmcabCcSG1kuZzOwlIys+uW74vjgvfY9tmR75/UEaMlUO34+FzM7Lc9c169NdM7sc9EokZzLekanUIf8UntF0UtySo6luGIfT0hflG9va+bO0Ovi9PHdrUKYrNjaPdiWkNuK2IRkIGjj7lW7kQ1i7XMgyrspTBwraz93N5H/u28DysXO7AgR5qdxHofWE7IfO0yqC7aUit5bU3Rxf+ophBPmvcVVv9zLb5gByTP3JAnv7wrG9qQIZSzSSt7oMhWUmt2/RcmFdPgkTIoGX4C6G15x+qjTF/L+UCIZJ/xdwqVW51NcxAbpzRc2Z9/dIIKmSwsGPxPtv77Hu5MZH63Ca/PeHba7sNpa5bZtDfDJTW8lKF+oW/KWRgMHk8zFh1I1jycGvJd+U/MNqodU9lBiNLbR0WXW9YlprfEZ/Bnvly854ZxZ0xd+Xn6eJL5j+0/eJNPNOLDJxAa8g0vbhU80k+O5qqx/MZ/LQPcvPS8D/OxYbyTjG7f92Fq5lfzUvKd6Lj6iqSlDuOJ2STenI/+AwW9kJq1T5ju5gj1CODNPqisszAjNT7oCE+AI3IsYj4V36TQb/n1ysD74vnr68XZ+b82dPZ7tKUG0PFDDJ578+4ZhmEnlr3TIuSPHRdNuEGej6DDovlXd9ZzTKIqFqXlHXNS8Ofiptn8Bm8MvYq7bmzjXplMNeVBbFmVmOFq7Ze0CbzoijMD3pMfhjiuj0LWpjKNQNazVO6ygRhemGVPyCzoihk8OYbH8KOP/3aZaC50q/2de4VMXPlt6KuzJ5PLt0H2sE3+MnyBzPql8HYTYRtr+pM7gcVB0+nvDHG4nLBm5RFae1sGHG1QNj5dnaoXQbaiPDX2iFi3yIqtFZL6TX/2UQb0WplIWWwN3z/5fS1fX+w7d6yV7M50lFzU0yKVmviyv9zHrhF6zSi/Fg5SN31ueNDk3KHyd+R8uWyzXrZIjOYnU+Z+nXMQJsGxHLCUZBuSDBVWlch0c1wtDXdjTRKRDpNJ6NuPlH0+Ddli7GWuGMnZieHvSZkQJQM7vQl6ejJMU3Tu/RFYOjlrcFMbeiHeYMjrzleXpQdl51F9nJaRXMZzD15lAkf47M+l8HDQgbI4AgZIIMjZIAMjpBB7sD9k+VRvSMCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAfyC34HRdsNWCWoAAAAAElFTkSuQmCC"
+                alt="">
+            <div id="nav-part2">
+                <h3>Home</h3>
+                <h3>Project</h3>
+                <h3>about</h3>
+                <h3>contact</h3>
+            </div>
+        </div>
+        <div class="container">
+            <div id="left">
+                <img src="https://images.pexels.com/photos/5846162/pexels-photo-5846162.jpeg?cs=srgb&dl=pexels-anna-butusova-5846162.jpg&fm=jpg"
+                    alt="">
+            </div>
+            <div id="right">
+                <p id="name">Hello Im Karan</p>
+                <h1>Visual Designer</h1>
+                <p id="lorem">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur nemo inventore enim
+                    temporibus molestiae obcaecati! Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi alias sequi a at blanditiis iure?</p>
+                <div class="button">About Me</div>
+            </div>
+        </div>
+    </div>
+    <div id="headline">
+       <h2>our tutorials</h2>
+    </div>
+    <div id="page2">
+       
+        <div class="container1">
+            <div class="box">
+                <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/f6/04/9c/f6049c1d-68a4-2a43-a9f7-84250aa2567f/CorelDraw.png/1200x600bf.png" alt="">
+                <h3>ui design</h3>
+                <p id="lorem">Lorem ipsum dolor sit, amet consectetur adipisicing elit. A, provident.</p>
+            </div>
+            <div class="box">
+                
+                <img src="https://cleverism.com/wp-content/uploads/2014/07/901-Product-Design-The-complete-guide.png" alt="">
+                <h3>product design</h3>
+                <p id="lorem">Lorem ipsum dolor sit, amet consectetur adipisicing elit. A, provident.</p>
+            </div>
+            <div class="box">
+                
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Adobe_Illustrator_CC_icon.svg/120px-Adobe_Illustrator_CC_icon.svg.png" alt="">
+                <h3>illustrator</h3>
+                <p id="lorem">Lorem ipsum dolor sit, amet consectetur adipisicing elit. A, provident.</p>
+            </div>
+            <div class="box">
+                
+                <img src="https://www.yellowslice.in/bed/wp-content/uploads/2022/03/User-Experience-Design-Essentials-in-2022-Banner.jpg" alt="">
+                <h3>ux design</h3>
+                <p id="lorem">Lorem ipsum dolor sit, amet consectetur adipisicing elit. A, provident.</p>
+            </div>
+            <div class="box">
+                
+                <img src="https://quolum.com/blog/wp-content/uploads/2023/01/coverimage.png" alt="">
+                <h3>figma</h3>
+                <p id="lorem">Lorem ipsum dolor sit, amet consectetur adipisicing elit. A, provident.</p>
+            </div>
+            <div class="box">
+                
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Adobe_Photoshop_Express_logo.svg/512px-Adobe_Photoshop_Express_logo.svg.png?20191002231530" alt="">
+                <h3>photoshop</h3>
+                <p id="lorem">Lorem ipsum dolor sit, amet consectetur adipisicing elit. A, provident.</p>
+            </div>
+        </div>
+    </div>
+    <div id="page3">
+        <div class="container2">
+            <h2>Let's work together on your next project</h2>
+            <div id="btncontainer">
+                <div class="btn">contact</div>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum magni dignissimos hic assumenda expedita quis!</p>
+          
+        </div>
+        
+    </div>
+    <div id="footercont">
+        <div id="footer">
+            <div class="fot">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQMAAADCCAMAAAB6zFdcAAAAq1BMVEUAAAD///8YNi0cHBzk5ORe1LFjY2P4+PjLy8vX19cbPTNOTk4uaVhf2rWRkZFVv6AHDw3Dw8NbW1tj4Lvz8/O8vLxBQUFWVlaIiIhg2LSqqqpqamq2traampolVEZ7e3s1NTUiIiIXFxdFnIIOIBpYyKdycnI9PT1HR0fV1dUpKSmDg4M+jXXr6+utra1IpYkRKCE3fGcgSDwqYE9Qs5YWMSo+i3QoW00IExBkbH06AAAEYklEQVR4nO3Ze3eaPAAGcDLBgIpKAyoowxusaJVq7drv/8mGR4Fc6tl29J28x+f3V0igkodLEqppAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPYft87zO4P6t57zO4P2RwdQav2WJ5ozO5nysz2DHWudGZ3M+VGezt+NuNzuR+rn0fLP//jwLeiRoyOHrIDOZrjxBKaHDqvJRBY+2QHA3G8nHt0M0PI57Y8GoYn9KOncxgzI4Xb1/9erI9/rje/XFNF66V6LQ7bj8/JRNirjQ5g0inYfI0bCYmcabCcSG1kuZzOwlIys+uW74vjgvfY9tmR75/UEaMlUO34+FzM7Lc9c169NdM7sc9EokZzLekanUIf8UntF0UtySo6luGIfT0hflG9va+bO0Ovi9PHdrUKYrNjaPdiWkNuK2IRkIGjj7lW7kQ1i7XMgyrspTBwraz93N5H/u28DysXO7AgR5qdxHofWE7IfO0yqC7aUit5bU3Rxf+ophBPmvcVVv9zLb5gByTP3JAnv7wrG9qQIZSzSSt7oMhWUmt2/RcmFdPgkTIoGX4C6G15x+qjTF/L+UCIZJ/xdwqVW51NcxAbpzRc2Z9/dIIKmSwsGPxPtv77Hu5MZH63Ca/PeHba7sNpa5bZtDfDJTW8lKF+oW/KWRgMHk8zFh1I1jycGvJd+U/MNqodU9lBiNLbR0WXW9YlprfEZ/Bnvly854ZxZ0xd+Xn6eJL5j+0/eJNPNOLDJxAa8g0vbhU80k+O5qqx/MZ/LQPcvPS8D/OxYbyTjG7f92Fq5lfzUvKd6Lj6iqSlDuOJ2STenI/+AwW9kJq1T5ju5gj1CODNPqisszAjNT7oCE+AI3IsYj4V36TQb/n1ysD74vnr68XZ+b82dPZ7tKUG0PFDDJ578+4ZhmEnlr3TIuSPHRdNuEGej6DDovlXd9ZzTKIqFqXlHXNS8Ofiptn8Bm8MvYq7bmzjXplMNeVBbFmVmOFq7Ze0CbzoijMD3pMfhjiuj0LWpjKNQNazVO6ygRhemGVPyCzoihk8OYbH8KOP/3aZaC50q/2de4VMXPlt6KuzJ5PLt0H2sE3+MnyBzPql8HYTYRtr+pM7gcVB0+nvDHG4nLBm5RFae1sGHG1QNj5dnaoXQbaiPDX2iFi3yIqtFZL6TX/2UQb0WplIWWwN3z/5fS1fX+w7d6yV7M50lFzU0yKVmviyv9zHrhF6zSi/Fg5SN31ueNDk3KHyd+R8uWyzXrZIjOYnU+Z+nXMQJsGxHLCUZBuSDBVWlch0c1wtDXdjTRKRDpNJ6NuPlH0+Ddli7GWuGMnZieHvSZkQJQM7vQl6ejJMU3Tu/RFYOjlrcFMbeiHeYMjrzleXpQdl51F9nJaRXMZzD15lAkf47M+l8HDQgbI4AgZIIMjZIAMjpBB7sD9k+VRvSMCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAfyC34HRdsNWCWoAAAAAElFTkSuQmCC">
+            </div>
+            <div class="bet">
+                <i class="ri-instagram-line"></i>
+                <i class="ri-twitter-line"></i>
+                <i class="ri-messenger-line"></i>
+            </div>
+            <div class="madeby">
+                <h3>Created by Karan</h3>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js" integrity="sha512-7Au1ULjlT8PP1Ygs6mDZh9NuQD0A5prSrAUiPHMXpU6g3UMd8qesVnhug5X4RoDr35x5upNpx0A6Sisz1LSTXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/ScrollTrigger.min.js" integrity="sha512-LQQDtPAueBcmGXKdOBcMkrhrtqM7xR2bVrnMtYZ8ImAZhFlIb5xrMqQ6uZviyeSB+4mYj89ta8niiCIQM1Gj0w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        var tl=gsap.timeline()
+        tl.from("#page1 #nav img,#nav-part2 h3",{
+            y:-400,
+            opacity:0,
+            duration:2,
+            stagger:1
+
+        })
+
+        gsap.from(".container img",{
+            x:-400,
+            opacity:0,
+            duration:2,
+            stagger:1
+
+        })
+
+        
+        gsap.from(".container #right",{
+            x:400,
+            opacity:0,
+            duration:2,
+            stagger:1
+
+        })
+
+        gsap.from("#headline h2",{
+            x:-400,
+            opacity:0,
+            duration:2,
+            stagger:1,
+            scrollTrigger:{
+                trigger:"#headline h2",
+                scroll:"body",
+                start:"top 10%"
+
+            }
+
+        })
+
+        
+        
+        gsap.from("  #page2 .container1 ",{
+            x:-400,
+            opacity:0,
+            duration:2,
+            stagger:1,
+            scrollTrigger:{
+                trigger:"#headline h2",
+                scroll:"body",
+                start:"top 10%"
+                
+            }
+
+
+        })
+     
+
+        gsap.from("#page3 .container2",{
+           scale:0,
+           duration:2,
+            scrollTrigger:{
+                trigger:"#headline h2",
+                scroll:"body",
+                start:"bottom -50%",
+                
+                // markers:true
+                
+            }
+
+
+        })
+    </script>
+</body>
+
+</html>
